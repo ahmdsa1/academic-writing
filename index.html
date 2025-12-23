@@ -1,174 +1,231 @@
-# Academic Writing Services
+<!doctype html>
 
-Clear scope. Transparent pricing. Academic standards.
-
-
----
-
-## Package 1 – Short Academic Article
-
-**Price:** 200 EGP
-
-* 4–7 pages
-* 4–6 academic references
-* Standard formatting (APA / IEEE / Harvard)
-* Basic plagiarism check
-* Suitable for: short essays, course assignments, reflection papers
-
----
-
-## Package 2 – Extended Article / Mini‑Review
-
-**Price:** 400–700 EGP
-
-* Up to 20 pages
-* Up to 10 citations
-* Original tables and figures
-* Structured sections (Abstract, Introduction, Methods, Discussion)
-* Manual plagiarism control
-* Suitable for: term papers, literature reviews, capstone drafts
-
----
-
-## Package 3 – Research‑Level Paper
-
-**Price:** 900–1,200 EGP
-
-* 20–30 pages
-* 15–25 citations
-* Top‑tier references (Q1/Q2 journals)
-* Advanced academic language
-* Original figures, tables, and data summaries
-* Journal‑style structure
-* Suitable for: graduation projects, research proposals
-
----
-
-## Package 4 – Thesis / Long Report Support
-
-**Price:** 1,500–2,500 EGP
-
-* 30–60 pages
-* 30+ citations
-* Mixed references (top‑tier + standard)
-* Deep literature synthesis
-* Formatting compliance (university guidelines)
-* Iterative revision (2 rounds)
-* Suitable for: thesis chapters, final year reports
-
----
-
-## Package 5 – Custom Academic Writing
-
-**Price:** Calculated automatically
-
-You choose:
-
-* Number of pages
-* Number of citations
-* Reference quality
-* Figures and tables
-* Deadline urgency
-* Subject difficulty
-
----
-
-## Optional Add‑Ons
-
-* Top‑tier references only (Scopus / Web of Science)
-* Plagiarism report (Turnitin‑style)
-* Statistical tables or simple data analysis
-* Presentation slides (based on article)
-* Fast delivery (48–72 hours)
-
----
-
-## Pricing Calculator (GitHub Pages – HTML/JS)
-
-```html
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Article Price Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Academic Writing Services — Pricing & Calculator</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; }
-    label { display: block; margin-top: 15px; }
-    output { font-weight: bold; }
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#2563eb;--glass:rgba(255,255,255,0.03)}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#041027 0%, #081127 60%);color:#e6eef6}
+    .wrap{max-width:980px;margin:36px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:64px;height:64px;border-radius:10px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:20px}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:20px}
+
+```
+.card{background:rgba(255,255,255,0.02);padding:18px;border-radius:10px}
+.packages{display:grid;gap:12px}
+.pkg{display:flex;justify-content:space-between;align-items:flex-start;padding:12px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+.pkg .meta{max-width:72%}
+.pkg h3{margin:0 0 6px;font-size:16px}
+.pkg small{color:var(--muted)}
+.price{font-weight:700;color:var(--accent)}
+
+.calculator h2{margin-top:0}
+label{display:block;margin:12px 0 6px;color:var(--muted);font-size:13px}
+.row{display:flex;gap:10px;align-items:center}
+input[type=range]{width:100%}
+select,input[type=number]{width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.small{font-size:13px;color:var(--muted)}
+.total{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px}
+.cta{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+
+footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+@media (max-width:920px){.grid{grid-template-columns:1fr;}.wrap{margin:18px;padding:16px}}
+```
+
   </style>
 </head>
 <body>
+  <main class="wrap">
+    <header>
+      <div class="logo">AWS</div>
+      <div>
+        <h1>Academic Writing Services</h1>
+        <p class="lead">Transparent pricing. Fast turnaround. Student-focused scope.</p>
+      </div>
+    </header>
 
-<h2>Academic Article Cost Calculator</h2>
+```
+<div class="grid">
+  <section class="card">
+    <h2 style="margin-top:0">Packages</h2>
+    <div class="packages">
 
-<label>
-  Number of pages:
-  <input type="range" id="pages" min="4" max="60" value="7" oninput="calc()">
-  <output id="pagesOut">7</output>
-</label>
+      <div class="pkg">
+        <div class="meta">
+          <h3>Package 1 — Short Article</h3>
+          <small>4–7 pages · 4–6 refs · basic formatting · 1 revision</small>
+        </div>
+        <div class="price">200 EGP</div>
+      </div>
 
-<label>
-  Number of citations:
-  <input type="range" id="cites" min="4" max="40" value="6" oninput="calc()">
-  <output id="citesOut">6</output>
-</label>
+      <div class="pkg">
+        <div class="meta">
+          <h3>Package 2 — Extended Article / Mini-Review</h3>
+          <small>Up to 20 pages · up to 10 refs · tables & figures · structured sections</small>
+        </div>
+        <div class="price">400–700 EGP</div>
+      </div>
 
-<label>
-  Reference quality:
-  <select id="refs" onchange="calc()">
-    <option value="1">Standard references</option>
-    <option value="1.4">Top‑tier journals</option>
-  </select>
-</label>
+      <div class="pkg">
+        <div class="meta">
+          <h3>Package 3 — Research-Level Paper</h3>
+          <small>20–30 pages · 15–25 refs · top-tier refs option · advanced language</small>
+        </div>
+        <div class="price">900–1,200 EGP</div>
+      </div>
 
-<label>
-  Figures / Tables:
-  <select id="figs" onchange="calc()">
-    <option value="0">None</option>
-    <option value="100">1–3</option>
-    <option value="200">4–6</option>
-  </select>
-</label>
+      <div class="pkg">
+        <div class="meta">
+          <h3>Package 4 — Thesis / Long Report Support</h3>
+          <small>30–60 pages · 30+ refs · university formatting · 2 revision rounds</small>
+        </div>
+        <div class="price">1,500–2,500 EGP</div>
+      </div>
 
-<label>
-  Deadline urgency:
-  <select id="urgent" onchange="calc()">
-    <option value="1">Standard</option>
-    <option value="1.25">Fast (3–4 days)</option>
-    <option value="1.5">Urgent (48 hours)</option>
-  </select>
-</label>
+      <div class="pkg">
+        <div class="meta">
+          <h3>Custom Package</h3>
+          <small>Choose pages, refs, figures, deadline, reference quality</small>
+        </div>
+        <div class="price">Calculated</div>
+      </div>
 
-<h3>Total Cost: <span id="total">200</span> EGP</h3>
+    </div>
 
-<script>
-function calc() {
-  const pages = document.getElementById('pages').value;
-  const cites = document.getElementById('cites').value;
-  const refs = document.getElementById('refs').value;
-  const figs = document.getElementById('figs').value;
-  const urgent = document.getElementById('urgent').value;
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:16px 0">
+    <h3 style="margin:6px 0">Optional add‑ons</h3>
+    <ul class="small" style="margin:6px 0 0;padding-left:18px">
+      <li>Top‑tier references only (Scopus / Web of Science)</li>
+      <li>Plagiarism report (Turnitin-style)</li>
+      <li>Statistical tables / simple analysis</li>
+      <li>Slides (presentation) from article</li>
+      <li>Fast delivery (48–24 hours)</li>
+    </ul>
 
-  document.getElementById('pagesOut').value = pages;
-  document.getElementById('citesOut').value = cites;
+  </section>
 
-  let base = pages * 25 + cites * 10;
-  let total = (base * refs * urgent) + Number(figs);
+  <aside class="card calculator">
+    <h2>Academic Article Cost Calculator</h2>
 
-  document.getElementById('total').innerText = Math.round(total);
-}
-calc();
-</script>
+    <label>Number of pages <span id="pagesVal" class="small">7</span></label>
+    <input id="pages" type="range" min="4" max="60" value="7" oninput="update()">
+
+    <label>Number of citations <span id="citesVal" class="small">6</span></label>
+    <input id="cites" type="range" min="0" max="60" value="6" oninput="update()">
+
+    <label>Reference quality</label>
+    <select id="refQuality" onchange="update()">
+      <option value="1">Standard references</option>
+      <option value="1.35">Top‑tier journals</option>
+    </select>
+
+    <label>Figures / Tables</label>
+    <select id="figs" onchange="update()">
+      <option value="0">None</option>
+      <option value="80">1–2 (simple)</option>
+      <option value="140">3–5 (moderate)</option>
+      <option value="220">6–10 (many)</option>
+    </select>
+
+    <label>Deadline timeframe</label>
+    <select id="timeframe" onchange="update()">
+      <option value="1.00">Standard (10–14 days)</option>
+      <option value="1.05">Normal (6–9 days)</option>
+      <option value="1.15">Quick (3–5 days)</option>
+      <option value="1.30">Fast (48–72 hours)</option>
+      <option value="1.55">Urgent (24 hours)</option>
+    </select>
+
+    <label>Discipline difficulty</label>
+    <select id="difficulty" onchange="update()">
+      <option value="1">Standard</option>
+      <option value="1.12">Technical (math/chemistry/CS)</option>
+      <option value="1.20">Highly technical (advanced modelling / data)</option>
+    </select>
+
+    <div class="total">
+      <div>
+        <div class="small">Estimated total</div>
+        <div style="font-size:18px;font-weight:700" id="totalVal">200 EGP</div>
+      </div>
+      <div style="text-align:right">
+        <div class="small">Base breakdown</div>
+        <div id="breakdown" class="small">Pages: 7 × 25 + cites: 6 × 10</div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;display:flex;gap:10px">
+      <a id="contact" class="cta" href="mailto:your.email@example.com?subject=Order%20Inquiry">Contact</a>
+      <a class="cta" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)" href="#" onclick="copyLink()">Copy page URL</a>
+    </div>
+
+    <p class="small" style="margin-top:12px">Note: final price is confirmed after scope review. This is an estimate only.</p>
+
+  </aside>
+</div>
+
+<footer>
+  <div class="small">All work original. No undisclosed AI text. Revisions and communication included. For urgent orders, confirm availability before placing.</div>
+</footer>
+```
+
+  </main>
+
+  <script>
+    const pagesEl = document.getElementById('pages');
+    const citesEl = document.getElementById('cites');
+    const refQuality = document.getElementById('refQuality');
+    const figsEl = document.getElementById('figs');
+    const timeframe = document.getElementById('timeframe');
+    const difficulty = document.getElementById('difficulty');
+
+    function update(){
+      const pages = Number(pagesEl.value);
+      const cites = Number(citesEl.value);
+      const refMul = Number(refQuality.value);
+      const figs = Number(figsEl.value);
+      const timeMul = Number(timeframe.value);
+      const diffMul = Number(difficulty.value);
+
+      document.getElementById('pagesVal').innerText = pages;
+      document.getElementById('citesVal').innerText = cites;
+
+      // Base pricing rules (tuned for student market in EGP)
+      // per-page base, reduces for longer works
+      const pageBaseRate = pages <= 7 ? 28 : pages <= 20 ? 26 : pages <= 30 ? 24 : 22;
+      const basePages = pages * pageBaseRate;
+      const baseCites = cites * 12;
+
+      let base = basePages + baseCites;
+
+      // Minimum floor: ensure Package 1 and 2 align
+      if(pages <= 7 && cites <= 6) base = Math.max(base,200);
+      if(pages <= 20 && cites <= 10) base = Math.max(base,400);
+
+      let total = (base + figs) * refMul * timeMul * diffMul;
+
+      // Round to nearest 5
+      total = Math.round(total/5)*5;
+
+      document.getElementById('totalVal').innerText = total + ' EGP';
+      document.getElementById('breakdown').innerText = `Pages: ${pages} × ${pageBaseRate} + Cites: ${cites} × 12 + Figures: ${figs}`;
+    }
+
+    function copyLink(){
+      navigator.clipboard.writeText(window.location.href).then(()=>{
+        alert('URL copied to clipboard');
+      });
+    }
+
+    // initial
+    update();
+  </script>
 
 </body>
 </html>
-```
-
----
-
-## Notes
-
-* All work is original and written from scratch
-* No AI‑generated text unless explicitly requested
-* Communication and revisions handled professionally
-* Ideal for GitHub Pages deployment
