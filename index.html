@@ -1,0 +1,173 @@
+# Academic Writing Services
+
+Clear scope. Transparent pricing. Academic standards.
+
+---
+
+## Package 1 – Short Academic Article
+
+**Price:** 200 EGP
+
+* 4–7 pages
+* 4–6 academic references
+* Standard formatting (APA / IEEE / Harvard)
+* Basic plagiarism check
+* Suitable for: short essays, course assignments, reflection papers
+
+---
+
+## Package 2 – Extended Article / Mini‑Review
+
+**Price:** 400–700 EGP
+
+* Up to 20 pages
+* Up to 10 citations
+* Original tables and figures
+* Structured sections (Abstract, Introduction, Methods, Discussion)
+* Manual plagiarism control
+* Suitable for: term papers, literature reviews, capstone drafts
+
+---
+
+## Package 3 – Research‑Level Paper
+
+**Price:** 900–1,200 EGP
+
+* 20–30 pages
+* 15–25 citations
+* Top‑tier references (Q1/Q2 journals)
+* Advanced academic language
+* Original figures, tables, and data summaries
+* Journal‑style structure
+* Suitable for: graduation projects, research proposals
+
+---
+
+## Package 4 – Thesis / Long Report Support
+
+**Price:** 1,500–2,500 EGP
+
+* 30–60 pages
+* 30+ citations
+* Mixed references (top‑tier + standard)
+* Deep literature synthesis
+* Formatting compliance (university guidelines)
+* Iterative revision (2 rounds)
+* Suitable for: thesis chapters, final year reports
+
+---
+
+## Package 5 – Custom Academic Writing
+
+**Price:** Calculated automatically
+
+You choose:
+
+* Number of pages
+* Number of citations
+* Reference quality
+* Figures and tables
+* Deadline urgency
+* Subject difficulty
+
+---
+
+## Optional Add‑Ons
+
+* Top‑tier references only (Scopus / Web of Science)
+* Plagiarism report (Turnitin‑style)
+* Statistical tables or simple data analysis
+* Presentation slides (based on article)
+* Fast delivery (48–72 hours)
+
+---
+
+## Pricing Calculator (GitHub Pages – HTML/JS)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Article Price Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; }
+    label { display: block; margin-top: 15px; }
+    output { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h2>Academic Article Cost Calculator</h2>
+
+<label>
+  Number of pages:
+  <input type="range" id="pages" min="4" max="60" value="7" oninput="calc()">
+  <output id="pagesOut">7</output>
+</label>
+
+<label>
+  Number of citations:
+  <input type="range" id="cites" min="4" max="40" value="6" oninput="calc()">
+  <output id="citesOut">6</output>
+</label>
+
+<label>
+  Reference quality:
+  <select id="refs" onchange="calc()">
+    <option value="1">Standard references</option>
+    <option value="1.4">Top‑tier journals</option>
+  </select>
+</label>
+
+<label>
+  Figures / Tables:
+  <select id="figs" onchange="calc()">
+    <option value="0">None</option>
+    <option value="100">1–3</option>
+    <option value="200">4–6</option>
+  </select>
+</label>
+
+<label>
+  Deadline urgency:
+  <select id="urgent" onchange="calc()">
+    <option value="1">Standard</option>
+    <option value="1.25">Fast (3–4 days)</option>
+    <option value="1.5">Urgent (48 hours)</option>
+  </select>
+</label>
+
+<h3>Total Cost: <span id="total">200</span> EGP</h3>
+
+<script>
+function calc() {
+  const pages = document.getElementById('pages').value;
+  const cites = document.getElementById('cites').value;
+  const refs = document.getElementById('refs').value;
+  const figs = document.getElementById('figs').value;
+  const urgent = document.getElementById('urgent').value;
+
+  document.getElementById('pagesOut').value = pages;
+  document.getElementById('citesOut').value = cites;
+
+  let base = pages * 25 + cites * 10;
+  let total = (base * refs * urgent) + Number(figs);
+
+  document.getElementById('total').innerText = Math.round(total);
+}
+calc();
+</script>
+
+</body>
+</html>
+```
+
+---
+
+## Notes
+
+* All work is original and written from scratch
+* No AI‑generated text unless explicitly requested
+* Communication and revisions handled professionally
+* Ideal for GitHub Pages deployment
